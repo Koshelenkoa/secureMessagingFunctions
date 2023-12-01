@@ -51,7 +51,6 @@ exports.sendMessageToClient =
               logger.log(recipient);
               const userRecord = await getAuth().getUser(recipient);
               const token = await userRecord.customClaims["token"];
-              logger.log(`token: ${token}`);
               const payload = {
                 token: token,
                 notification: {
